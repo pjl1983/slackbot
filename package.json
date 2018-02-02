@@ -2,7 +2,10 @@
   "name": "slackbot",
   "version": "0.0.1",
   "description": "My first slackbot",
-  "main": "ap.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "author": "Mark George",
   "license": "MIT",
   "dependencies": {
