@@ -25,6 +25,7 @@ app.post('/lunch', function(req, res, next) {
     })();
 
     var botPayload = {
+	response_type: "in_channel",
         text: "I recommend eating at " + choice + "."
     }
 
