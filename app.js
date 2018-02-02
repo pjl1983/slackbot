@@ -25,7 +25,7 @@ app.post('/lunch', function(req, res, next) {
     })();
 
     var botPayload = {
-        text: "Tim recommends eating at " + choice + "."
+        text: "I recommend eating at " + choice + "."
     }
 
 	if (userName !== 'slackbot') {
