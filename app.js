@@ -15,9 +15,16 @@ app.listen(port, function () {
 });
 
 app.post('/lunch', function(req, res, next) {
-	var userName = req.body.user_name;
-	var botPayload = {
-		text: "Hello " + userName + "welcome to slack Botz!"
+    var options = ['Fired Pie','Red Robin','Cold Beer & Cheezeburgers','Yogis','Gyro Express','Portillos','Canton Dragon','Joyful Chinese','Porkopolis','Naked BBQ','Tavern','Pei Wei','Wallys','The Vig','Humble Pie',]
+
+	var food = function () {
+        var number = Math.floor(Math.random() * options.length);
+        var choice = options[number];
+        return choice;
+    };
+
+    var botPayload = {
+		text: "Tim recommends eating at " + food() + "."
 	}
 
 	if (userName !== 'slackbot') {
