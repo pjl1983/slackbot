@@ -15,16 +15,18 @@ app.listen(port, function () {
 });
 
 app.post('/lunch', function(req, res, next) {
+	var userName = req.body.user_name;
+
     var options = ['Fired Pie','Red Robin','Cold Beer & Cheezeburgers','Yogis','Gyro Express','Portillos','Canton Dragon','Joyful Chinese','Porkopolis','Naked BBQ','Tavern','Pei Wei','Wallys','The Vig','Humble Pie',]
-	var choice = "Fired Pie";
-	(function () {
+    var choice = "Fired Pie";
+    (function () {
         var number = Math.floor(Math.random() * options.length);
         choice = options[number];
     })();
 
     var botPayload = {
-		text: "Tim recommends eating at " + choice + "."
-	}
+        text: "Tim recommends eating at " + choice + "."
+    }
 
 	if (userName !== 'slackbot') {
 		return 	res.status(200).json(botPayload);
