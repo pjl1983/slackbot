@@ -1,0 +1,13 @@
+{
+  "name": "slackbot",
+  "version": "0.0.1",
+  "description": "My first slackbot",
+  "main": "ap.js",
+  "author": "Mark George",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2",
+    "request": "^2.83.0"
+  }
+}
